@@ -1,8 +1,8 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/nbvaa55gu3icd1q8?svg=true)](https://ci.appveyor.com/project/oliverw/miningcore)
-[![.NET](https://github.com/oliverw/miningcore/actions/workflows/dotnet.yml/badge.svg)](https://github.com/oliverw/miningcore/actions/workflows/dotnet.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/nbvaa55gu3icd1q8?svg=true)](https://ci.appveyor.com/project/marcofortina/miningcore)
+[![.NET](https://github.com/marcofortina/miningcore/actions/workflows/dotnet.yml/badge.svg)](https://github.com/marcofortina/miningcore/actions/workflows/dotnet.yml)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-<img src="https://github.com/oliverw/miningcore/raw/master/logo.png" width="150">
+<img src="https://github.com/marcofortina/miningcore/raw/master/logo.png" width="150">
 
 ### Features
 
@@ -13,7 +13,7 @@
 - Session management for purging DDoS/flood initiated zombie workers
 - Payment processing
 - Banning System
-- Live Stats [API](https://github.com/oliverw/miningcore/wiki/API) on Port 4000
+- Live Stats [API](https://github.com/marcofortina/miningcore/wiki/API) on Port 4000
 - WebSocket streaming of notable events like Blocks found, Blocks unlocked, Payments and more
 - POW (proof-of-work) & POS (proof-of-stake) support
 - Detailed per-pool logging to console & filesystem
@@ -23,16 +23,16 @@
 
 Commercial support directly by the maintainer is available through [miningcore.pro](https://store.miningcore.pro).
 
-For general questions visit the [Discussions Area](https://github.com/oliverw/miningcore/discussions).
+For general questions visit the [Discussions Area](https://github.com/marcofortina/miningcore/discussions).
 
 ## Contributions
 
-Code contributions are very welcome and should be submitted as standard [pull requests](https://docs.github.com/en/pull-requests) (PR) based on the [`dev` branch](https://github.com/oliverw/miningcore/tree/dev).
+Code contributions are very welcome and should be submitted as standard [pull requests](https://docs.github.com/en/pull-requests) (PR) based on the [`dev` branch](https://github.com/marcofortina/miningcore/tree/dev).
 
 ## Building on Debian/Ubuntu
 
 ```console
-git clone https://github.com/oliverw/miningcore
+git clone https://github.com/marcofortina/miningcore
 cd miningcore
 ```
 
@@ -55,7 +55,7 @@ or
 Download and install the [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ```dosbatch
-git clone https://github.com/oliverw/miningcore
+git clone https://github.com/marcofortina/miningcore
 cd miningcore
 build-windows.bat
 ```
@@ -69,7 +69,7 @@ build-windows.bat
 In case you don't want to install any dependencies then you can build the app using the official Microsoft .NET SDK Docker image.
 
 ```console
-git clone https://github.com/oliverw/miningcore
+git clone https://github.com/marcofortina/miningcore
 cd miningcore
 ```
 Then build using Docker:
@@ -125,7 +125,7 @@ docker system prune -af
 
 ### Production OS
 
-Windows is **not** a supported production environment. Only Linux is. Please do not file issues related to running a pool on Windows. Windows topics should be posted under [discussions](https://github.com/oliverw/miningcore/discussions).
+Windows is **not** a supported production environment. Only Linux is. Please do not file issues related to running a pool on Windows. Windows topics should be posted under [discussions](https://github.com/marcofortina/miningcore/discussions).
 
 Running and developing Miningcore on Windows is of course supported.
 
@@ -176,7 +176,7 @@ Once you have done this for all of your existing pools you should now restore yo
 
 ### Configuration
 
-Create a configuration file `config.json` as described [here](https://github.com/oliverw/miningcore/wiki/Configuration).
+Create a configuration file `config.json` as described [here](https://github.com/marcofortina/miningcore/wiki/Configuration).
 
 ### Start the Pool
 
@@ -187,7 +187,7 @@ Miningcore -c config.json
 
 ## Supported Currencies
 
-Refer to [this file](https://github.com/oliverw/miningcore/blob/master/src/Miningcore/coins.json) for a complete list.
+Refer to [this file](https://github.com/marcofortina/miningcore/blob/master/src/Miningcore/coins.json) for a complete list.
 
 ## Caveats
 
@@ -211,7 +211,7 @@ Refer to [this file](https://github.com/oliverw/miningcore/blob/master/src/Minin
 
 ## API
 
-Miningcore comes with an integrated REST API. Please refer to this page for instructions: https://github.com/oliverw/miningcore/wiki/API
+Miningcore comes with an integrated REST API. Please refer to this page for instructions: https://github.com/marcofortina/miningcore/wiki/API
 
 ## Running a production pool
 
@@ -221,15 +221,6 @@ Once again, do not run a production pool on Windows! This is not a supported con
 
 ## Donations
 
-To support this project you can become a [sponsor](https://github.com/sponsors/oliverw) or send a donation to the following accounts:
+To support this project you can become a [sponsor](https://github.com/sponsors/marcofortina) or send a donation to the following accounts:
 
-* ETH:  `miningcore.eth (ENS Address)`
-* BTC:  `miningcore.eth (ENS Address)`
-* LTC:  `miningcore.eth (ENS Address)`
-* DOGE: `DGDuKRhBewGP1kbUz4hszNd2p6dDzWYy9Q`
-* ETC:  `0xF8cCE9CE143C68d3d4A7e6bf47006f21Cfcf93c0`
-* DASH: `XqpBAV9QCaoLnz42uF5frSSfrJTrqHoxjp`
-* ZEC:  `t1YHZHz2DGVMJiggD2P4fBQ2TAPgtLSUwZ7`
-* BTG:  `GQb77ZuMCyJGZFyxpzqNfm7GB1rQreP4n6`
-* ERGO: `9foYU8JkoqWBSDA3ba8VHfduPXV2NaVNPPAFkdYoR9t9cPQGMv4`
-* XMR:  `46S2AEwYmD9fnmZkxCpXf1T3U3DyEq3Ekb8Lg9kgUMGABn9Fp9q5nE2fBcXebrjrXfZHy5uC5HfLE6X4WLtSm35wUr9Mh46`
+* BTC:  `1N2rQimKbeUQA8N2LU5vGopYQJmZsBM2d6`

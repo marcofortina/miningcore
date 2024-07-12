@@ -621,16 +621,9 @@ public class Program : BackgroundService
  ██║╚██╔╝██║██║██║╚██╗██║██║██║╚██╗██║██║   ██║██║     ██║   ██║██╔══██╗██╔══╝
  ██║ ╚═╝ ██║██║██║ ╚████║██║██║ ╚████║╚██████╔╝╚██████╗╚██████╔╝██║  ██║███████╗
 ");
-        Console.WriteLine(" https://github.com/oliverw/miningcore\n");
+        Console.WriteLine(" https://github.com/marcofortina/miningcore\n");
         Console.WriteLine(" Donate to one of these addresses to support the project:\n");
-        Console.WriteLine(" ETH  - miningcore.eth (ENS Address)");
-        Console.WriteLine(" BTC  - miningcore.eth (ENS Address)");
-        Console.WriteLine(" LTC  - miningcore.eth (ENS Address)");
-        Console.WriteLine(" DASH - XqpBAV9QCaoLnz42uF5frSSfrJTrqHoxjp");
-        Console.WriteLine(" ZEC  - t1YHZHz2DGVMJiggD2P4fBQ2TAPgtLSUwZ7");
-        Console.WriteLine(" ZCL  - t1MFU1vD3YKgsK6Uh8hW7UTY8mKAV2xVqBr");
-        Console.WriteLine(" ETC  - 0xF8cCE9CE143C68d3d4A7e6bf47006f21Cfcf93c0");
-        Console.WriteLine(" XMR  - 475YVJbPHPedudkhrcNp1wDcLMTGYusGPF5fqE7XjnragVLPdqbCHBdZg3dF4dN9hXMjjvGbykS6a77dTAQvGrpiQqHp2eH");
+        Console.WriteLine(" BTC  - 1N2rQimKbeUQA8N2LU5vGopYQJmZsBM2d6");
         Console.WriteLine();
     }
 
