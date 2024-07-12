@@ -313,6 +313,13 @@ public partial class EquihashCoinTemplate : CoinTemplate
 
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public uint? SaplingTxVersionGroupId { get; set; }
+
+        // BitcoinZ community fee
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public ulong TreasuryRewardLastBlockHeight { get; set; }
+
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool TreasuryAsFoundersReward { get; set; }
     }
 
     [JsonProperty(Order = -7, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]

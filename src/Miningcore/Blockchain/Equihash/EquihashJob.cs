@@ -109,7 +109,8 @@ public class EquihashJob
         {
             // founders or treasury reward?
             if(networkParams.TreasuryRewardStartBlockHeight > 0 &&
-               BlockTemplate.Height >= networkParams.TreasuryRewardStartBlockHeight)
+               BlockTemplate.Height >= networkParams.TreasuryRewardStartBlockHeight &&
+               BlockTemplate.Height <= networkParams.TreasuryRewardLastBlockHeight)
             {
                 // pool reward (t-addr)
                 rewardToPool = new Money(Math.Round(blockReward * (1m - (networkParams.PercentTreasuryReward) / 100m)) + rewardFees, MoneyUnit.Satoshi);
@@ -149,8 +150,18 @@ public class EquihashJob
 
     private string GetTreasuryRewardAddress()
     {
-        var index = (int) Math.Floor((BlockTemplate.Height - networkParams.TreasuryRewardStartBlockHeight) /
-            networkParams.TreasuryRewardAddressChangeInterval % networkParams.TreasuryRewardAddresses.Length);
+        var index = 0;
+
+        if(networkParams.TreasuryAsFoundersReward)
+        {
+            index = (int) Math.Floor(BlockTemplate.Height / networkParams.TreasuryRewardAddressChangeInterval);
+        }
+
+        else
+        {
+            index = (int) Math.Floor((BlockTemplate.Height - networkParams.TreasuryRewardStartBlockHeight) /
+                networkParams.TreasuryRewardAddressChangeInterval % networkParams.TreasuryRewardAddresses.Length);
+        }
 
         var address = networkParams.TreasuryRewardAddresses[index];
         return address;
